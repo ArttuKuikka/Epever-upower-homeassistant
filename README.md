@@ -8,6 +8,6 @@ Home assistant modbus configuration for epever upower UP3000-M3322 inverter/char
 - Add modbus: `!include modbus.yaml` to configuration.yaml
 
 ## Pictures:
-[](https://raw.githubusercontent.com/ArttuKuikka/Epever-upower-homeassistant/main/ha1.png)
-[](https://raw.githubusercontent.com/ArttuKuikka/Epever-upower-homeassistant/main/ha2.png)
-[](https://raw.githubusercontent.com/ArttuKuikka/Epever-upower-homeassistant/main/serial.png)
+![1](https://raw.githubusercontent.com/ArttuKuikka/Epever-upower-homeassistant/main/ha1.png)
+![2](https://raw.githubusercontent.com/ArttuKuikka/Epever-upower-homeassistant/main/ha2.png)
+![3](https://raw.githubusercontent.com/ArttuKuikka/Epever-upower-homeassistant/main/serial.png)
