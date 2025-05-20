@@ -1,0 +1,207 @@
+- name: EpeverUPower
+  type: rtuovertcp
+  host: 10.60.0.10
+  port: 8234
+  switches:
+    - name: "Load Switch"
+      slave: 1
+      address: 262
+      write_type: coil
+      verify:
+    - name: "Energy-saving Mode"
+      slave: 1
+      address: 261
+      write_type: coil
+      verify:
+    - name: "Clear Accumulated Energy"
+      slave: 1
+      address: 256
+      write_type: coil
+      verify:
+    - name: "Clear Fault"
+      slave: 1
+      address: 257
+      write_type: coil
+      verify:
+  sensors:
+    - name: "Utility Charging Current"
+      unit_of_measurement: "A"
+      input_type: input
+      slave: 1
+      address: 13574
+      data_type: uint16
+      precision: 1
+      scale: 0.01
+
+    - name: "PV Current"
+      unit_of_measurement: "A"
+      input_type: input
+      slave: 1
+      address: 13594
+      data_type: uint16
+      precision: 1
+      scale: 0.01
+    - name: "Battery SOC"
+      unit_of_measurement: "%"
+      input_type: input
+      slave: 1
+      address: 13648
+      data_type: uint16
+      precision: 1
+      scale: 1
+
+    - name: "Device Temperature"
+      unit_of_measurement: "℃"
+      input_type: input
+      slave: 1
+      address: 13586
+      data_type: uint16
+      precision: 1
+      scale: 0.01
+
+    - name: "Total PV Generation"
+      unit_of_measurement: "kWh"
+      input_type: input
+      slave: 1
+      address: 13607
+      data_type: uint16
+      precision: 1
+      scale: 0.01
+      device_class: energy
+      state_class: total_increasing
+
+    - name: "Utility Voltage"
+      unit_of_measurement: "V"
+      input_type: input
+      slave: 1
+      address: 13568
+      data_type: uint16
+      precision: 1
+      scale: 0.01
+
+    - name: "Load Power"
+      unit_of_measurement: "W"
+      input_type: input
+      slave: 1
+      device_class: power
+      address: 13658
+      data_type: int32
+      precision: 1
+      scale: 0.01
+      swap: word
+
+    - name: "Load Current"
+      unit_of_measurement: "A"
+      input_type: input
+      slave: 1
+      address: 13620
+      data_type: uint16
+      precision: 1
+      scale: 0.01
+
+    - name: "Total Utility Charging"
+      unit_of_measurement: "kWh"
+      input_type: input
+      slave: 1
+      address: 13583
+      data_type: uint16
+      precision: 1
+      scale: 0.01
+      device_class: energy
+      state_class: total_increasing
+
+    - name: "Charging Current"
+      unit_of_measurement: "A"
+      input_type: input
+      slave: 1
+      address: 13598
+      data_type: uint16
+      precision: 1
+      scale: 0.01
+
+    - name: "Load Voltage"
+      unit_of_measurement: "V"
+      input_type: input
+      slave: 1
+      address: 13619
+      data_type: uint16
+      precision: 1
+      scale: 0.01
+    - name: "Utility Current"
+      unit_of_measurement: "A"
+      input_type: input
+      slave: 1
+      address: 13569
+      data_type: uint16
+      precision: 1
+      scale: 0.01
+    - name: "Battery Voltage"
+      unit_of_measurement: "V"
+      input_type: input
+      slave: 1
+      address: 13644
+      data_type: uint16
+      precision: 1
+      scale: 0.01
+
+    - name: "Output Frequency"
+      unit_of_measurement: "Hz"
+      input_type: input
+      slave: 1
+      address: 13627
+      data_type: uint16
+      precision: 1
+      scale: 0.01
+    - name: "Battery Temperature"
+      unit_of_measurement: "℃"
+      input_type: input
+      slave: 1
+      address: 13647
+      data_type: uint16
+      precision: 1
+      scale: 0.01
+    - name: "PV Power"
+      unit_of_measurement: "W"
+      input_type: input
+      slave: 1
+      address: 13595
+      data_type: uint32
+      precision: 1
+      scale: 0.01
+      swap: word
+
+    - name: "Output Load Status"
+      unit_of_measurement: "?"
+      input_type: input
+      slave: 1
+      address: 13621
+      data_type: uint16
+      precision: 1
+      scale: 1
+
+    - name: "Utility Power"
+      unit_of_measurement: "W"
+      input_type: input
+      slave: 1
+      address: 13575
+      data_type: uint32
+      precision: 1
+      scale: 0.01
+      swap: word
+
+    - name: "PV Voltage"
+      unit_of_measurement: "V"
+      input_type: input
+      slave: 1
+      address: 13593
+      data_type: uint16
+      precision: 1
+      scale: 0.01
+
+    - name: "PV Charging Status"
+      input_type: input
+      slave: 1
+      address: 13609
+      data_type: string
+      count: 1
+
